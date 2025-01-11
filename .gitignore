@@ -3,6 +3,7 @@
 .viminfo
 .vim
 .wget-hsts
+*.old
 out/
 
 secrets
