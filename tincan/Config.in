@@ -1,0 +1,6 @@
+source "$BR2_EXTERNAL_TINCAN_PATH/package/python-sapphire-config/Config.in"
+source "$BR2_EXTERNAL_TINCAN_PATH/package/python-datatransport/Config.in"
+source "$BR2_EXTERNAL_TINCAN_PATH/package/ts7100-utils/Config.in"
+source "$BR2_EXTERNAL_TINCAN_PATH/package/tssupervisorupdate/Config.in"
+source "$BR2_EXTERNAL_TINCAN_PATH/package/tincan-network/Config.in"
+source "$BR2_EXTERNAL_TINCAN_PATH/package/zramswap/Config.in"

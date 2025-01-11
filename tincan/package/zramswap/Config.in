@@ -1,0 +1,7 @@
+config BR2_PACKAGE_ZRAMSWAP
+	bool "zramswap"
+	help
+	    Sets up zram based swap devices on boot 
+
+	    https://aur.archlinux.org/packages/zramswap	
+

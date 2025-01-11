@@ -1,0 +1,28 @@
+config BR2_PACKAGE_TINCAN_NETWORK
+	bool "tincan-network"
+    select BR2_PACKAGE_PYTHON3
+    select BR2_PACKAGE_OPENSSH
+	help
+	    Tincan network support 
+
+	    Includes tools to create, manage and monitor Tincan SSH tunnels.
+
+		https://github.com/valentic/tincan-network
+
+if BR2_PACKAGE_TINCAN_NETWORK
+
+config BR2_PACKAGE_TINCAN_NETWORK_GROUP
+    string "Group name"
+    default "tincan"
+    help
+        Name of the group to use for the tincan network
+
+config BR2_PACKAGE_TINCAN_NETWORK_SERVER
+    string "Server URL"
+    default "https://someserver/tincan/v1"
+    help
+        URL of the server to use for the tincan network
+
+        https://someserver/tincan/v1
+
+endif

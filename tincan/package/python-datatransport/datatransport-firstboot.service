@@ -1,0 +1,16 @@
+[Unit]
+Description=Data Transport firstboot initialization 
+Wants=postgresql.service first-boot-complete.target datatransport.service
+Before=first-boot-complete.target datatransport.service
+After=postgresql.service
+
+[Service]
+Type=oneshot
+
+ExecStart=/bin/su - postgres -c "/bin/createuser ops"
+ExecStart=/bin/su - postgres -c "/bin/createuser transport --createdb"
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+

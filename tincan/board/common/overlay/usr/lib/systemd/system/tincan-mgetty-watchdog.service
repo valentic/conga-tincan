@@ -1,0 +1,8 @@
+[Unit]
+Description=Tincan system mgetty watchdog service
+Requires=tincan-mgetty-watchdog.timer
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/mgetty-watchdog
+

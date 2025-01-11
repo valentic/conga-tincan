@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+##########################################################################
+#
+#   Set the CPU frequency governor.
+#   
+#   The default kernel setting is powersave, which reduces performance.
+#   For higher throughput loads, select one of the other governors
+#   such as schedutil, ondemand or performance.
+#   
+#   The configuration is set in /etc/default/cpupower
+#
+#   2023-07-21  Todd Valentic
+#               Initial implementation
+#
+##########################################################################
+
+readonly CONFIG="/etc/default/cpupower"
+
+[ ! -x /usr/bin/cpupower ] && exit 0
+
+if [ -f "${CONFIG}" ]; then
+    . "${CONFIG}" 
+fi
+
+# Set defaults if not specified
+: "${GOVERNOR:=schedutil}"
+
+function start {
+    cpupower frequency-set --governor ${GOVERNOR}
+    logger -s "Setting CPU governor to ${GOVERNOR}" 
+}
+
+function stop {
+    cpupower frequency-set --governor powersave 
+    logger -s "Setting CPU governor to powersave"
+}
+
+function status {
+    cpupower frequency-info
+}
+
+function usage {
+    cat << EOF
+Usage: (start|stop|restart|status)
+
+EOF
+}
+
+
+case "$1" in
+    start)      start;;
+    stop)       stop;;
+    restart)    stop && start;;
+    status)     status;;
+    "")         usage;;
+    *)          usage;; 
+
+esac
+
+exit 0

@@ -1,0 +1,33 @@
+==========================================================================
+Projects for the Embedded Data Transport (Tincan) Platform 
+==========================================================================
+
+Using buildroot release: buildroot-2024.08.1
+    https://buildroot.org/downloads/buildroot-2024.08.1.tar.gz
+
+    <project>-<system>-<hardware>-<version>
+
+board/
+    conga-tincan-ts7250v3-v1    
+
+config/
+    conga-tincan-ts7250v3-v1_defconfig
+
+patches/
+    Patch collection 
+
+package/
+    Additional packages
+
+Notes:
+
+    - to reinstall the overlay:
+
+        make target-clean
+
+    - to rebuild the uboot boot.scr from boot.source:
+
+        make host-uboot-tools-dirclean
+        make host-uboot-tools
+
+

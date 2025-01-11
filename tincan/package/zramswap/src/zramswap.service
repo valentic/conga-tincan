@@ -1,0 +1,11 @@
+[Unit]
+Description=ZRAM swap service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/zramswap start
+ExecStop=/usr/local/bin/zramswap stop 
+
+[Install]
+WantedBy=multi-user.target

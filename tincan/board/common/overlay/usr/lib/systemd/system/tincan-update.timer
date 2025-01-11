@@ -1,0 +1,10 @@
+[Unit]
+Description=Tincan update timer"
+
+[Timer]
+Unit=tincan-update.service
+OnBootSec=1min
+OnUnitActiveSec=1min
+
+[Install]
+WantedBy=timers.target

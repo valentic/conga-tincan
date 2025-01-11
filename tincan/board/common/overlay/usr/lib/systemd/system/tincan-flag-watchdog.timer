@@ -1,0 +1,10 @@
+[Unit]
+Description=Tincan flag watchdog timer
+
+[Timer]
+Unit=tincan-flag-watchdog.service
+OnBootSec=1min
+OnUnitActiveSec=1min
+
+[Install]
+WantedBy=timers.target

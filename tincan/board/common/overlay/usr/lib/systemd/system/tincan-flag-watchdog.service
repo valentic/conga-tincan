@@ -1,0 +1,8 @@
+[Unit]
+Description=Tincan system flag watchdog service
+Requires=tincan-flag-watchdog.timer
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/flag-watchdog
+

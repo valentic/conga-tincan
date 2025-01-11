@@ -1,0 +1,9 @@
+[Unit]
+Description="Tincan relay watchdog timer"
+
+[Timer]
+Unit=tincan-relay-watchdog.service
+OnCalendar=*-*-* *:00:00
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,17 @@
+[Unit]
+Description=Data Transport server
+Wants=postgresql.service
+After=postgresql.service
+
+[Service]
+Type=simple
+
+User=transport
+Group=transport
+
+ExecStart=/usr/bin/transportd
+KillMode=control-group
+
+[Install]
+WantedBy=multi-user.target
+

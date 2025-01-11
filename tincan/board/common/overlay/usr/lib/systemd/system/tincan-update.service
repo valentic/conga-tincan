@@ -1,0 +1,8 @@
+[Unit]
+Description=Tincan system update service
+Requires=tincan-update.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/check_updates
+User=root

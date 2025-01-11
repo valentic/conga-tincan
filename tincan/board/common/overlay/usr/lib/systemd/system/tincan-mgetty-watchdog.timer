@@ -1,0 +1,10 @@
+[Unit]
+Description=Tincan mgetty watchdog timer"
+
+[Timer]
+Unit=tincan-mgetty-watchdog.service
+OnBootSec=1min
+OnUnitActiveSec=1min
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,3 @@
+/home/ops/.ssh d 0700 ops ops - - - - -
+/etc/NetworkManager/system-connections/hotspot.nmconnection f 600 root root - - - - - 
+/etc/NetworkManager/system-connections/wired.nmconnection f 600 root root - - - - - 

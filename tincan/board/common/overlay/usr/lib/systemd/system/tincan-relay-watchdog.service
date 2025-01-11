@@ -1,0 +1,8 @@
+[Unit]
+Description=Tincan system relay watchdog service
+Requires=tincan-relay-watchdog.timer
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/relay-watchdog
+
