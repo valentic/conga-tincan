@@ -1,0 +1,10 @@
+.bash_history
+.buildroot-ccache/
+.viminfo
+.vim
+.wget-hsts
+out/
+
+secrets
+dl
+build
