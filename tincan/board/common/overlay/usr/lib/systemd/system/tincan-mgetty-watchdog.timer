@@ -1,5 +1,5 @@
 [Unit]
-Description=Tincan mgetty watchdog timer"
+Description=Tincan mgetty watchdog timer
 
 [Timer]
 Unit=tincan-mgetty-watchdog.service

@@ -1,5 +1,5 @@
 [Unit]
-Description="Tincan relay watchdog timer"
+Description=Tincan relay watchdog timer
 
 [Timer]
 Unit=tincan-relay-watchdog.service
