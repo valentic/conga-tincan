@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-TINCAN_NETWORK_VERSION = v1.6.4
+TINCAN_NETWORK_VERSION = v1.6.5
 TINCAN_NETWORK_SITE = $(call github,valentic,tincan-network,$(TINCAN_NETWORK_VERSION))
 TINCAN_NETWORK_LICENSE = GPL-3.0+ 
 TINCAN_NETWORK_LICENSE_FILES = LICENSE

@@ -4,8 +4,8 @@ Description=ZRAM swap service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/local/bin/zramswap start
-ExecStop=/usr/local/bin/zramswap stop 
+ExecStart=/usr/bin/zramswap start
+ExecStop=/usr/bin/zramswap stop 
 
 [Install]
 WantedBy=multi-user.target
